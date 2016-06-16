@@ -1,0 +1,383 @@
+/* Styles for header */
+
+.THIS .capricornHeader {
+    width: 100%;
+    padding: 20px 0 20px 0;
+    background-color: #EEE;
+    border-bottom: 1px solid #ddd;
+}
+
+.THIS .capricornHeader .capricornHeaderContent {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* Override existing navigation bar styles */
+
+.THIS .capricornNavBar {
+    flex: 1;
+}
+
+.THIS .forceCommunityNavigationMenu {
+    background: none;
+    border-top: none;
+}
+
+.THIS .forceCommunityNavigationMenu .navigationMenu {
+    margin: 0;
+    max-width: inherit;
+}
+
+.THIS .forceCommunityNavigationMenu .menuItemLink,
+.THIS .forceCommunityNavigationMenu .menuItemLink.triggerLink {
+    color: #000;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+}
+
+.THIS .forceCommunityNavigationMenu .menuItemLink.homeButton {
+    color: #000;
+    opacity: 0.6;
+}
+
+.THIS .forceCommunityNavigationMenu .menuItemLink.homeButton:hover {
+    opacity: 1;
+}
+
+.THIS .forceCommunityNavigationMenu .menuItemLink {
+    transition: 0.3s all;
+}
+
+.THIS .forceCommunityNavigationMenu .menuItemLink:hover,
+.THIS .forceCommunityNavigationMenu .menuItemLink:focus,
+.THIS .forceCommunityNavigationMenu .menuItemLink.triggerLink:hover,
+.THIS .forceCommunityNavigationMenu .menuItemLink.triggerLink:focus,
+.THIS .forceCommunityNavigationMenu .menuItem.current .menuItemLink,
+.THIS .forceCommunityNavigationMenu .menuItem.current .menuItemLink.triggerLink {
+    background-color: rgba(173,173,173,0.3);
+    color: #000;
+    border-radius: 50px;
+}
+
+/* Override existing user profile styles */
+
+.THIS .selfServiceProfileMenuTrigger {
+    padding: 0;
+}
+
+.THIS .selfServiceProfileMenuTrigger a{
+    color: #66381E;
+    box-shadow: none;
+}
+
+.THIS .selfServiceProfileMenu .popupTargetContainer {
+    border-radius: 4px;
+    background-color: rgba(255,255,255,0.8);
+}
+
+.THIS .selfServiceProfileMenuTrigger .profileName {
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+}
+
+.THIS .selfServiceProfileMenuTrigger .profileName,
+.THIS .selfServiceProfileMenuTrigger .triggerDownArrow,
+.THIS .selfServiceProfileMenu .menuList li > a {
+    color: #000;
+}
+
+.THIS .selfServiceProfileMenu .menuList {
+    margin-top: 10px;
+    min-width: 220px;
+}
+
+.THIS .selfServiceProfileMenu .menuList li > a {
+    padding: 13px 18px;
+    font-weight: 300;
+    font-size: 16px;
+    transition: 0.2s all;
+    outline: none;
+}
+
+.THIS .selfServiceProfileMenuTrigger .profileName,
+.THIS .selfServiceProfileMenu .menuList li > a:hover,
+.THIS .selfServiceProfileMenu .menuList li > a:focus {
+    font-weight: 500;
+}
+
+/* Override existing header styles for Home Page */
+
+.THIS .capricornHome .capricornHeader {
+    background-color: inherit;
+    border-bottom: none;
+}
+
+.THIS .capricornHome .capricornHeaderContent {
+    max-width: inherit;
+    margin: inherit;
+}
+
+/* Styles for background video shown on Home page */
+
+.THIS .capricornBackground {
+    display: none;
+}
+
+.THIS .capricornHome .capricornBackground {
+    display: block;
+}
+
+.THIS .capricornBackground {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -100;
+}
+
+.THIS .capricornHome .capricornBackgroundVideo {
+    width: 100%;
+}
+
+/* Styles for updating the featured content/topics on Home page */
+
+.THIS .capricornHome .capricornContent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.THIS .capricornHome .capricornContent .ui-widget {
+    margin: 0;
+}
+
+/* Override existing featured topics styles */
+
+.THIS .capricornHome .forceTopicFeaturedTopics .listContent {
+    width: 100%;
+}
+
+.THIS .capricornHome .forceTopicFeaturedTopics .topicList {
+    display: flex;
+    overflow: visible;
+}
+
+.THIS .capricornHome .forceTopicFeaturedTopicItem.topicItem {
+    height: 70px;
+    position: relative;
+    transition: 0.3s all ease;
+    flex: 1;
+}
+
+.THIS .capricornHome .forceTopicFeaturedTopicItem.topicItem:hover {
+    z-index: 888;
+    flex: 2;
+}
+
+.THIS .capricornHome .forceTopicFeaturedTopicItem.topicItem:hover .topicLink {
+    position: absolute;
+    bottom: 2px;
+    height: 210px;
+    box-shadow: 0 0 3px 1px rgba(0,0,0,0.1),0 0 25px 6px rgba(0,0,0,0.2);
+}
+
+.THIS .capricornHome .forceTopicFeaturedTopicItem.topicItem:hover .topicContent {
+    background-color: rgba(0,0,0,0.1);
+}
+
+.THIS .capricornHome .forceTopicFeaturedTopicItem .topicLink {
+    border-radius: 3px;
+}
+
+.THIS .capricornHome .forceTopicFeaturedTopicItem .topicImage {
+    opacity: 0;
+    transition: 0.3s all ease;
+}
+
+.THIS .capricornHome .forceTopicFeaturedTopicItem:hover .topicImage {
+    opacity: 1;
+    background-position: center 0%;
+}
+
+.THIS .capricornHome .forceTopicFeaturedTopicItem .topicLabel {
+    font-size: 14px;
+    font-weight: 300;
+    transition: 0.3s all ease;
+}
+
+.THIS .capricornHome .forceTopicFeaturedTopicItem:hover .topicLabel {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+    padding: 10px 0;
+}
+
+/* Override existing navigation menu styles for Home Page */
+.THIS .capricornHome .forceCommunityNavigationMenu .menuItemLink:hover,
+.THIS .capricornHome .forceCommunityNavigationMenu .menuItemLink:focus,
+.THIS .capricornHome .forceCommunityNavigationMenu .menuItemLink.triggerLink:hover,
+.THIS .capricornHome .forceCommunityNavigationMenu .menuItemLink.triggerLink:focus,
+.THIS .capricornHome .forceCommunityNavigationMenu .menuItem.current .menuItemLink,
+.THIS .capricornHome .forceCommunityNavigationMenu .menuItem.current .menuItemLink.triggerLink {
+    background-color: rgba(255,255,255,0.3);
+}
+
+/* Override existing omnibox/search styles for Home Page */
+
+.THIS .capricornSearch {
+    display: none;
+    flex: 1;
+}
+
+.THIS .capricornHome .forceCommunityOmniBox {
+    height: inherit;
+}
+
+.THIS .capricornHome .forceCommunityOmniBox .no-assigned-image .default-bg-overlay {
+    background: none;
+    height: 0;
+}
+
+.THIS .capricornHome .forceCommunityOmniBox .search-wrapper {
+    padding: 0px;
+}
+
+.THIS .capricornHome .forceCommunityOmniBox.selfServiceSearchWrapper .search-button.uiButton {
+    background-color: inherit;
+}
+
+.THIS .capricornHome .forceCommunityOmniBox .search-button .label {
+    display: none;
+}
+
+.THIS .capricornHome .forceCommunityOmniBox .search-button .search-icon {
+    color: #000;
+    font-size: 14px;
+    position: absolute;
+    top: 10px;
+    right: 13px;
+}
+
+.THIS .capricornHome .forceCommunityOmniBox .search-field::-webkit-input-placeholder {
+    color: #000;
+}
+
+.THIS .capricornHome .forceCommunityOmniBox .uiAutocompleteList {
+    max-height: 30vh;
+    overflow: scroll;
+}
+
+.THIS .capricornHome .forceCommunityOmniBox .search-input-group,
+.THIS .capricornHome .forceCommunityOmniBox .search-field {
+    width: 100%;
+}
+
+.THIS .capricornHome .forceCommunityOmniBox .search-field {
+    background-color: hsla(0,0%,100%,.5);
+    border-radius: 4px;
+    border-color: rgba(255,255,255,0.5);
+    height: 60px;
+    width: 100%;
+    color: #66381e;
+}
+
+.THIS .capricornHome .forceCommunityOmniBox .search-field:focus {
+    box-shadow: 0 0 3px #666869;
+    border-radius: 4px;
+}
+
+.THIS .capricornHome .forceCommunityDeflectionOption.highlighted a.suggestion,
+.THIS .capricornHome .forceCommunityDeflectionOption a.suggestion:hover,
+.THIS .capricornHome .forceCommunityDeflectionOption a.suggestion:focus{
+    background-color: rgba(102, 56, 30, 0.1);
+}
+
+.THIS .capricornHome .forceCommunityOmniBox.selfServiceSearchWrapper .search-button.uiButton {
+    background-color: inherit;
+}
+
+.THIS .capricornHome .forceCommunityOmniBox .search-button .label {
+    display: none;
+}
+
+.THIS .capricornHome .forceCommunityOmniBox .search-button .search-icon {
+    float: right;
+    padding-right: 18px;
+    padding-top: 14px;
+    color: #FFF;
+    font-size: 17px;
+}
+
+.THIS .capricornHome .forceCommunityOmniBox .search-field::-webkit-input-placeholder {
+    color: #66381E;
+}
+
+.THIS .capricornHome .forceCommunityOmniBox .uiAutocompleteList {
+    max-height: 30vh;
+    overflow: scroll;
+}
+
+/* Styles for updating search and logo on Home page */
+
+.THIS .capricornHome .capricornSearch {
+    width: 55vw;
+    text-align: center;
+    margin: 0 auto;
+    flex: inherit;
+    display: block;
+}
+
+.THIS .capricornCompanyLogo {
+    display: none;
+}
+
+.THIS .capricornHome .capricornCompanyLogo {
+    display: inline;
+    width: 13vw;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+/* Could replace with custom Lighting Layout */
+.THIS .capricornHome .capricornContent .slds-col--padded {
+    padding: 0;
+}
+
+/* Override styles for navigation bar on Home page */
+.THIS .capricornHome .capricornNavBar {
+    margin-left: 35px;
+}
+
+/* Override styles for user profile menu on Home page */
+.THIS .capricornHome .capricornProfileMenu {
+    margin-right: 35px;
+}
+
+/* Override styles for various buttons */
+
+.THIS .uiButton,
+.THIS .communityBtn.uiButton{
+    border-radius: 50px;
+}
+
+/* Sample Token Usage */
+.THIS .forceCommunityNavigationMenu .menuItemLink,
+.THIS .forceCommunityNavigationMenu .menuItemLink.triggerLink,
+.THIS .forceCommunityNavigationMenu .menuItemLink.homeButton,
+.THIS .forceCommunityNavigationMenu .menuItemLink:hover,
+.THIS .forceCommunityNavigationMenu .menuItemLink:focus,
+.THIS .forceCommunityNavigationMenu .menuItemLink.triggerLink:hover,
+.THIS .forceCommunityNavigationMenu .menuItemLink.triggerLink:focus,
+.THIS .forceCommunityNavigationMenu .menuItem.current .menuItemLink,
+.THIS .forceCommunityNavigationMenu .menuItem.current .menuItemLink.triggerLink {
+    color: token(capLinkTextColor);
+}
+
+.THIS .selfServiceProfileMenuTrigger .profileName,
+.THIS .selfServiceProfileMenuTrigger .triggerDownArrow,
+.THIS .selfServiceProfileMenu .menuList li > a {
+    color: token(capLinkTextColor);
+}

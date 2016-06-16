@@ -1,0 +1,49 @@
+<aura:component implements="forceCommunity:themeLayout">
+
+    <!-- Pre-defined set of Napili regions to include; each must be defined as an Aura attribute -->
+    <aura:attribute name="navBar" type="Aura.Component[]"/>
+    <aura:attribute name="profileMenu" type="Aura.Component[]"/>
+    <aura:attribute name="omniBox" type="Aura.Component[]"/>
+
+    <aura:attribute name="companyLogoPath" type="String" default="{!$Resource.CapricornCafeThemeExpRoundLogo}"/>
+    <aura:attribute name="backgroundVideoPath" type="String" default="{!$Resource.CapricornCafeThemeExpHeroVideo}"/>
+
+    <!-- Register initialization handler for component -->
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+
+    <!-- Theme Layout Markup -->
+    <div class="capricornThemeLayout">
+
+        <div class="capricornContainer">
+
+            <!-- Add custom Lightning component to help determine what page is active -->
+            <c:CapricornThemeExperienceV2PageHelper />
+
+            <div class="capricornBackground">
+                <video class="capricornBackgroundVideo" autoplay="autoplay" loop="loop" src="{!v.backgroundVideoPath}"></video>
+            </div>
+
+            <div class="capricornHeader">
+                <div class="capricornHeaderContent">
+                    <div class="capricornNavBar">
+                        {!v.navBar} <!-- Designates where to insert the 'navBar' region content -->
+                    </div>
+
+                    <div class="capricornProfileMenu">
+                        {!v.profileMenu} <!-- Designates where to insert the 'profileMenu' region content -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="capricornSearch">
+                <img src="{!v.companyLogoPath}" class="capricornCompanyLogo" />
+                    {!v.omniBox} <!-- Designates where to insert the 'omniBox'/search region content -->
+            </div>
+
+            <div class="capricornContent">
+                {!v.body} <!-- Designates where to insert the inner page content -->
+            </div>
+        </div>
+    </div>
+
+</aura:component>
